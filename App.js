@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {AppContextProvider} from "./src/context/AppContext";
+import RootStack from "./src/navigation/RootStack";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return <AppContextProvider>
+        <RootStack/>
+    </AppContextProvider>
+
+
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         webviewRef.current.postMessage('INITIALIZATION')
+    //     }, 10000)
+    // }, [])
+
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: "100%",
+    height: "100%",
   },
 });
