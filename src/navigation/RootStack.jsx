@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 const RootStack = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={RouteNames.CONNECTION_PROPERTIES} screenOptions={{ headerShown: false }}>
+            <Stack.Navigator initialRouteName={RouteNames.CONNECTION_PROPERTIES} screenOptions={{headerShown: false}}>
                 <Stack.Screen name={RouteNames.CONNECTION_PROPERTIES} component={ConnectionScreen}/>
                 <Stack.Screen name={RouteNames.WEB_VIEW} component={WebViewScreen}/>
             </Stack.Navigator>

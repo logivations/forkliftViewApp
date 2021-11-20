@@ -1,5 +1,4 @@
-
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
@@ -29,6 +28,10 @@ export default StyleSheet.create({
         paddingLeft: 10,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    textError: {
+        marginTop: 10,
+        color: '#ef4444',
     },
     textInput: {
         backgroundColor: '#fff',

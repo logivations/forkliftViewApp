@@ -3,7 +3,7 @@ import {CONNECTION_URL, getData} from "../services/AsyncStorageOperations";
 
 const AppContext = React.createContext(null);
 
-export const AppContextProvider = ({ children }) => {
+export const AppContextProvider = ({children}) => {
     const webviewRef = useRef(null);
 
     const [url, setUrl] = useState('');
