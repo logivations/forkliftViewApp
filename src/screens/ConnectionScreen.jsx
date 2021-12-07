@@ -6,7 +6,7 @@ import {CONNECTION_URL, storeData} from "../services/AsyncStorageOperations";
 import useAppContext from "../context/AppContext";
 import RouteNames from "../constants/route.names";
 import KeyboardAvoidingWrapper from "../components/KeyboardAvoidingWrapper";
-
+import Constants from 'expo-constants';
 const ConnectionScreen = ({navigation}) => {
     const {url, setUrl} = useAppContext();
     const [isUrlValid, setUrlValidity] = useState(true);
@@ -57,6 +57,7 @@ const ConnectionScreen = ({navigation}) => {
                     <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
+            <Text style={styles.inputLabel}>Build version: {Constants.manifest.version}</Text>
         </View>
     </KeyboardAvoidingWrapper>;
 };
