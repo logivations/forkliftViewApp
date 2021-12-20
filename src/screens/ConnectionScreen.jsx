@@ -37,8 +37,7 @@ const ConnectionScreen = ({navigation}) => {
             })
     }, [url]);
 
-    return <KeyboardAvoidingWrapper>
-        <View style={styles.appContainer}>
+    return <View style={styles.appContainer}>
             <View style={styles.inputContainer}>
                 <Text style={styles.inputLabel}>Please set connection URL</Text>
                 <TextInput
@@ -57,9 +56,8 @@ const ConnectionScreen = ({navigation}) => {
                     <Text style={styles.buttonText}>Save</Text>
                 </TouchableOpacity>
             </View>
-            <Text style={styles.inputLabel}>Build version: {Constants.manifest.version}</Text>
-        </View>
-    </KeyboardAvoidingWrapper>;
+            <Text style={styles.inputLabel}>Build version: {Constants?.manifest?.version}</Text>
+        </View>;
 };
 
 export default ConnectionScreen;

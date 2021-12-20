@@ -38,7 +38,6 @@ const WebViewScreen = () => {
     }, [barcodeReaderVisible]);
 
     return <View style={styles.webViewContainerStyle}>
-        <KeyboardAvoidingWrapper>
             <WebView
                 source={{uri: url}}
                 startInLoadingState={true}
@@ -56,7 +55,6 @@ const WebViewScreen = () => {
                 }}
                 injectedJavaScript={injectedJavaScript}
             />
-        </KeyboardAvoidingWrapper>
     </View>;
 };
 

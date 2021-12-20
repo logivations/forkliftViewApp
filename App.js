@@ -7,7 +7,7 @@ import { ModalPortal } from 'react-native-modals';
 export default function App() {
     return <AppContextProvider>
         <SafeAreaProvider style={{ flex: 1 }}>
-            <RootStack/>
+            <RootStack />
             <ModalPortal />
         </SafeAreaProvider>
     </AppContextProvider>
